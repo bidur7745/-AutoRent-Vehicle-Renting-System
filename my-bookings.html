@@ -1,0 +1,137 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Bookings - AutoRent</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .bookings-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 2rem;
+        }
+        
+        .bookings-table th,
+        .bookings-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .bookings-table th {
+            background-color: var(--light-gray);
+            font-weight: bold;
+        }
+        
+        .status {
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.875rem;
+        }
+        
+        .status-pending {
+            background-color: #fff3cd;
+            color: #856404;
+        }
+        
+        .status-approved {
+            background-color: #d4edda;
+            color: #155724;
+        }
+        
+        .status-rejected {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+        
+        .status-completed {
+            background-color: #e2e3e5;
+            color: #383d41;
+        }
+        
+        .no-bookings {
+            text-align: center;
+            padding: 2rem;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <h1>AutoRent</h1>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="vehicles.html">Vehicles</a></li>
+                    <li><a href="my-bookings.html" class="active">My Bookings</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <h2>My Bookings</h2>
+        
+        <div class="card">
+            <table class="bookings-table">
+                <thead>
+                    <tr>
+                        <th>Vehicle</th>
+                        <th>Booking Date</th>
+                        <th>Return Date</th>
+                        <th>Total Price</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Sample Booking Data -->
+                    <tr>
+                        <td>Toyota Camry</td>
+                        <td>2024-04-01</td>
+                        <td>2024-04-05</td>
+                        <td>$200</td>
+                        <td><span class="status status-completed">Completed</span></td>
+                    </tr>
+                    <tr>
+                        <td>Honda CR-V</td>
+                        <td>2024-04-10</td>
+                        <td>2024-04-15</td>
+                        <td>$325</td>
+                        <td><span class="status status-approved">Approved</span></td>
+                    </tr>
+                    <tr>
+                        <td>Ford Mustang</td>
+                        <td>2024-04-20</td>
+                        <td>2024-04-25</td>
+                        <td>$400</td>
+                        <td><span class="status status-pending">Pending</span></td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <!-- Uncomment this section when there are no bookings -->
+            <!--
+            <div class="no-bookings">
+                <p>You haven't made any bookings yet.</p>
+                <a href="vehicles.html" class="btn btn-primary mt-1">Browse Vehicles</a>
+            </div>
+            -->
+        </div>
+    </main>
+
+    <footer class="mt-2">
+        <div class="container text-center">
+            <p>&copy; 2024 AutoRent. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html> 
